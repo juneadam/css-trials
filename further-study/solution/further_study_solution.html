@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ubermelon Order Form</title>
+    <style>
+    
+      body {
+        font-family: sans-serif;
+        margin-left: 12.5%;
+      }
+      h1 {
+        text-align: center;
+      }
+      .block-label {
+        display: block;
+      }
+      .inline-label {
+        width: 90px;
+        display: inline-block;
+        margin: 2px 0px;
+      }
+      table, th, td {
+        border: 1px solid;
+        border-collapse: collapse;
+        padding: 2px 5px;
+      }
+      #melon_form {
+        width: 147px;
+      }
+
+      #sidebar {
+        width: 30%;
+      }
+      #order-form {
+        width: 50%;
+        margin-right: 20%;
+      }
+
+      #container {
+        display: flex;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Order!</h1>
+
+    <div id="container">
+
+      <div id="sidebar">
+
+        <h2>Prices</h2>
+        <table>
+          <thead>
+
+            <tr>
+              <th>Melon Name</th>
+              <th>Price per lb.</th>
+            </tr>
+
+          </thead>
+          <tbody>
+        
+            <tr>
+              <td>Watermelon</td>
+              <td>$1.59</td>
+            </tr>
+            <tr>
+              <td>Honeydew</td>
+              <td>$0.99</td>
+            </tr>
+            <tr>
+              <td>Canteloupe</td>
+              <td>$1.29</td>
+            </tr>
+            <tr>
+              <td>Crenshaw</td>
+              <td>$2.19</td>
+            </tr>
+            <tr>
+              <td>Canary</td>
+              <td>$11.99</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div id="order-form">
+
+        <h2>Place your orders here! You know you want to.</h2>
+
+        <form action="/process" method="get">
+          <label class="inline-label" for="first">First Name</label>
+          <input type="text" name="firstname" id="first"><br>
+
+          <label class="inline-label" for="last">Last Name</label>
+          <input type="text" name="lastname" id="last"><br>
+
+          <label class="inline-label" for="melon_form">Melon Type</label>
+          <select name="melontype" id="melon_form">
+            <option value="watermelon">Watermelon</option>
+            <option value="honeydew">Honeydew</option>
+            <option value="canteloupe">Canteloupe</option>
+            <option value="crenshaw">Crenshaw</option>
+            <option value="canary">Canary</option>
+          </select>
+          <br>
+          <label class="inline-label" for="quantity-form">Quantity*:</label>
+          <input type="text" name="quantity" id="quantity-form">
+
+          <h4>Delivery Time</h4>
+          <label class="block-label"><input type="radio" name="time" value="am"> 12:00am-12:00pm</label>
+          <label class="block-label"><input type="radio" name="time" value="pm"> 12:00pm-12:00am</label>
+          <label class="block-label"><input type="radio" name="time" value="wat"> Time is an illusion</label>
+
+
+          <h4>Returning Customer?</h4>
+          <label class="block-label"><input type="radio" name="returning" value="yes" > Yes</label>
+          <label class="block-label"><input type="radio" name="returning" value="no" > No</label>
+
+
+          <h4>For Statistical Purposes:</h4>
+          <label class="block-label"><input type="checkbox" name="stats" value="Dog"> Dog</label>
+          <label class="block-label"><input type="checkbox" name="stats" value="Cat"> Cat</label>
+          <label class="block-label"><input type="checkbox" name="stats" value="Hedgehog"> Hedgehog</label>
+          <label class="block-label"><input type="checkbox" name="stats" value="Balloonicorn"> Balloonicorn</label>
+          <label class="block-label"><input type="checkbox" name="stats" value="Yak"> Yak</label>
+          <br>
+          <input type="submit">
+
+        </form>
+      </div>
+    </div>
+    <footer>
+      * Quantities given are by the flat.
+    </footer>
+
+  </body>
+</html>
